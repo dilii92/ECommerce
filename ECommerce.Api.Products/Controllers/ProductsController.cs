@@ -16,7 +16,7 @@ namespace ECommerce.Api.Products.Controllers
         }
         public async Task<IActionResult> GetProductAsync()
         {
-            var result = await productsProvider.GetProductAsync();
+            var result = await productsProvider.GetProductsAsync();
             if (result.IsSuccess)
             {
                 return Ok(result.Products);
